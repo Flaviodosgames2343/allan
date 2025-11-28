@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechStore - Capas e Fones Premium</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                        <rect width="32" height="32" rx="8" fill="#1f6feb"/>
+                        <path d="M16 8L20 16L16 24L12 16L16 8Z" fill="white"/>
+                    </svg>
+                    <h1>TechStore</h1>
+                </div>
+                <nav class="nav">
+                    <a href="#capas" class="nav-link">Capas</a>
+                    <a href="#fones" class="nav-link">Fones</a>
+                    <a href="#promocoes" class="nav-link">Promoções</a>
+                </nav>
+                <button class="cart-btn">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="9" cy="21" r="1"/>
+                        <circle cx="20" cy="21" r="1"/>
+                        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+                    </svg>
+                    <span class="cart-count">0</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h2 class="hero-title">Acessórios Premium para seu iPhone</h2>
+                    <p class="hero-subtitle">Capas exclusivas e fones de alta qualidade com os melhores preços</p>
+                    
+                    <div class="search-box">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8"/>
+                            <path d="m21 21-4.35-4.35"/>
+                        </svg>
+                        <input type="text" id="searchInput" placeholder="Buscar capas, fones...">
+                    </div>
+
+                    <div class="badges">
+                        <div class="badge">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20 7h-9M14 3v4M6 21V7a4 4 0 0 1 4-4h4"/>
+                                <circle cx="10" cy="16" r="4"/>
+                            </svg>
+                            <span>Frete grátis</span>
+                        </div>
+                        <div class="badge">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/>
+                                <path d="m9 12 2 2 4-4"/>
+                            </svg>
+                            <span>Garantia 6 meses</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <svg viewBox="0 0 300 400" fill="none">
+                        <rect x="50" y="20" width="200" height="360" rx="40" fill="#1f6feb" opacity="0.1"/>
+                        <rect x="60" y="30" width="180" height="340" rx="35" fill="white" stroke="#1f6feb" stroke-width="2"/>
+                        <rect x="100" y="50" width="100" height="8" rx="4" fill="#e5e7eb"/>
+                        <circle cx="150" cy="380" r="25" fill="#f3f4f6" stroke="#1f6feb" stroke-width="2"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="main">
+        <div class="container">
+            <div class="content-wrapper">
+                <!-- Filters Sidebar -->
+                <aside class="filters">
+                    <h3 class="filters-title">Filtros</h3>
+                    
+                    <div class="filter-group">
+                        <h4>Categoria</h4>
+                        <label class="filter-option">
+                            <input type="radio" name="category" value="all" checked>
+                            <span>Todos</span>
+                        </label>
+                        <label class="filter-option">
+                            <input type="radio" name="category" value="capas">
+                            <span>Capas</span>
+                        </label>
+                        <label class="filter-option">
+                            <input type="radio" name="category" value="fones">
+                            <span>Fones</span>
+                        </label>
+                    </div>
+
+                    <div class="filter-group">
+                        <h4>Modelo do iPhone</h4>
+                        <label class="filter-option">
+                            <input type="checkbox" class="model-filter" value="11">
+                            <span>iPhone 11</span>
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox" class="model-filter" value="12">
+                            <span>iPhone 12</span>
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox" class="model-filter" value="13">
+                            <span>iPhone 13</span>
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox" class="model-filter" value="14">
+                            <span>iPhone 14</span>
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox" class="model-filter" value="15">
+                            <span>iPhone 15</span>
+                        </label>
+                    </div>
+
+                    <div class="filter-group">
+                        <h4>Cor</h4>
+                        <label class="filter-option">
+                            <input type="checkbox" class="color-filter" value="preto">
+                            <span>Preto</span>
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox" class="color-filter" value="branco">
+                            <span>Branco</span>
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox" class="color-filter" value="rosa">
+                            <span>Rosa</span>
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox" class="color-filter" value="roxo">
+                            <span>Roxo</span>
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox" class="color-filter" value="transparente">
+                            <span>Transparente</span>
+                        </label>
+                    </div>
+
+                    <div class="filter-group">
+                        <h4>Faixa de Preço</h4>
+                        <div class="price-range">
+                            <input type="range" id="priceRange" min="0" max="500" value="500">
+                            <div class="price-display">
+                                <span>R$ 0</span>
+                                <span id="maxPrice">R$ 500</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="filter-group">
+                        <label class="filter-option">
+                            <input type="checkbox" id="freeShipping">
+                            <span>Frete grátis</span>
+                        </label>
+                    </div>
+                </aside>
+
+                <!-- Products Section -->
+                <section class="products-section">
+                    <div class="products-header">
+                        <h3 class="products-title">Nossos Produtos</h3>
+                        <select id="sortSelect" class="sort-select">
+                            <option value="popular">Mais vendidos</option>
+                            <option value="price-asc">Menor preço</option>
+                            <option value="price-desc">Maior preço</option>
+                        </select>
+                    </div>
+
+                    <div id="productsGrid" class="products-grid">
+                        <!-- Capas -->
+                        <div class="product-card" data-id="1" data-category="capas" data-model="15" data-color="preto" data-price="49.9" data-popular="100" data-free-shipping="true" data-promo="true">
+                            <div class="product-image">
+                                <svg viewBox="0 0 200 280" fill="none">
+                                    <rect x="20" y="10" width="160" height="260" rx="30" fill="#1f2937" stroke="#1f2937" stroke-width="3"/>
+                                    <rect x="30" y="20" width="140" height="240" rx="25" fill="white" opacity="0.2"/>
+                                    <rect x="70" y="35" width="60" height="6" rx="3" fill="white" opacity="0.4"/>
+                                    <circle cx="100" cy="255" r="15" fill="white" opacity="0.3"/>
+                                </svg>
+                                <span class="free-shipping-badge">Frete grátis</span>
+                                <span class="promo-badge">Promoção</span>
+                            </div>
+                            <div class="product-info">
+                                <h4 class="product-name">Capa Silicone Premium</h4>
+                                <p class="product-specs">iPhone 15 • Preto</p>
+                                <div class="product-price">
+                                    <span class="current-price">R$ 49.90</span>
+                                    <span class="old-price">R$ 89.90</span>
+                                </div>
+                                <div class="product-actions">
+                                    <button class="btn btn-primary add-to-cart" data-id="1">Adicionar</button>
+                                    <button class="btn btn-secondary view-details" data-id="1" data-name="Capa Silicone Premium" data-old-price="89.90">Detalhes</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="product-card" data-id="2" data-category="capas" data-model="15" data-color="transparente" data-price="39.9" data-popular="95" data-free-shipping="true">
+                            <div class="product-image">
+                                <svg viewBox="0 0 200 280" fill="none">
+                                    <rect x="20" y="10" width="160" height="260" rx="30" fill="#f3f4f6" stroke="#1f6feb" stroke-width="3"/>
+                                    <rect x="30" y="20" width="140" height="240" rx="25" fill="rgba(255,255,255,0.5)" opacity="0.2"/>
+                                    <rect x="70" y="35" width="60" height="6" rx="3" fill="white" opacity="0.4"/>
+                                    <circle cx="100" cy="255" r="15" fill="white" opacity="0.3"/>
+                                </svg>
+                                <span class="free-shipping-badge">Frete grátis</span>
+                            </div>
+                            <div class="product-info">
+                                <h4 class="product-name">Capa Transparente Anti-Queda</h4>
+                                <p class="product-specs">iPhone 15 • Transparente</p>
+                                <div class="product-price">
+                                    <span class="current-price">R$ 39.90</span>
+                                    <span class="old-price">R$ 69.90</span>
+                                </div>
+                                <div class="product-actions">
+                                    <button class="btn btn-primary add-to-cart" data-id="2">Adicionar</button>
+                                    <button class="btn btn-secondary view-details" data-id="2" data-name="Capa Transparente Anti-Queda" data-old-price="69.90">Detalhes</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="product-card" data-id="3" data-category="capas" data-model="14" data-color="preto" data-price="79.9" data-popular="85" data-free-shipping="true">
+                            <div class="product-image">
+                                <svg viewBox="0 0 200 280" fill="none">
+                                    <rect x="20" y="10" width="160" height="260" rx="30" fill="#1f2937" stroke="#1f2937" stroke-width="3"/>
+                                    <rect x="30" y="20" width="140" height="240" rx="25" fill="white" opacity="0.2"/>
+                                    <rect x="70" y="35" width="60" height="6" rx="3" fill="white" opacity="0.4"/>
+                                    <circle cx="100" cy="255" r="15" fill="white" opacity="0.3"/>
+                                </svg>
+                                <span class="free-shipping-badge">Frete grátis</span>
+                            </div>
+                            <div class="product-info">
+                                <h4 class="product-name">Capa Leather Elegante</h4>
+                                <p class="product-specs">iPhone 14 • Preto</p>
+                                <div class="product-price">
+                                    <span class="current-price">R$ 79.90</span>
+                                    <span class="old-price">R$ 129.90</span>
+                                </div>
+                                <div class="product-actions">
+                                    <button class="btn btn-primary add-to-cart" data-id="3">Adicionar</button>
+                                    <button class="btn btn-secondary view-details" data-id="3" data-name="Capa Leather Elegante" data-old-price="129.90">Detalhes</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="product-card" data-id="4" data-category="capas" data-model="14" data-color="rosa" data-price="44.9" data-popular="80" data-free-shipping="true" data-promo="true">
+                            <div class="product-image">
+                                <svg viewBox="0 0 200 280" fill="none">
+                                    <rect x="20" y="10" width="160" height="260" rx="30" fill="#ec4899" stroke="#ec4899" stroke-width="3"/>
+                                    <rect x="30" y="20" width="140" height="240" rx="25" fill="white" opacity="0.2"/>
+                                    <rect x="70" y="35" width="60" height="6" rx="3" fill="white" opacity="0.4"/>
+                                    <circle cx="100" cy="255" r="15" fill="white" opacity="0.3"/>
+                                </svg>
+                                <span class="free-shipping-badge">Frete grátis</span>
+                                <span class="promo-badge">Promoção</span>
+                            </div>
+                            <div class="product-info">
+                                <h4 class="product-name">Capa Fashion Rosa</h4>
+                                <p class="product-specs">iPhone 14 • Rosa</p>
+                                <div class="product-price">
+                                    <span class="current-price">R$ 44.90</span>
+                                    <span class="old-price">R$ 79.90</span>
+                                </div>
+                                <div class="product-actions">
+                                    <button class="btn btn-primary add-to-cart" data-id="4">Adicionar</button>
+                                    <button class="btn btn-secondary view-details" data-id="4" data-name="Capa Fashion Rosa" data-old-price="79.90">Detalhes</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="product-card" data-id="5" data-category="capas" data-model="13" data-color="branco" data-price="34.9" data-popular="75" data-free-shipping="false">
+                            <div class="product-image">
+                                <svg viewBox="0 0 200 280" fill="none">
+                                    <rect x="20" y="10" width="160" height="260" rx="30" fill="#ffffff" stroke="#ffffff" stroke-width="3"/>
+                                    <rect x="30" y="20" width="140" height="240" rx="25" fill="white" opacity="0.2"/>
+                                    <rect x="70" y="35" width="60" height="6" rx="3" fill="white" opacity="0.4"/>
+                                    <circle cx="100" cy="255" r="15" fill="white" opacity="0.3"/>
+                                </svg>
+                            </div>
+                            <div class="product-info">
+                                <h4 class="product-name">Capa Ultra Slim</h4>
+                                <p class="product-specs">iPhone 13 • Branco</p>
+                                <div class="product-price">
+                                    <span class="current-price">R$ 34.90</span>
+                                    <span class="old-price">R$ 59.90</span>
+                                </div>
+                                <div class="product-actions">
+                                    <button class="btn btn-primary add-to-cart" data-id="5">Adicionar</button>
+                                    <button class="btn btn-secondary view-details" data-id="5" data-name="Capa Ultra Slim" data-old-price="59.90">Detalhes</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="product-card" data-id="6" data-category="capas" data-model="13" data-color="roxo" data-price="49.9" data-popular="70" data-free-shipping="true">
+                            <div class="product-image">
+                                <svg viewBox="0 0 200 280" fill="none">
+                                    <rect x="20" y="10" width="160" height="260" rx="30" fill="#9147ff" stroke="#9147ff" stroke-width="3"/>
+                                    <rect x="30" y="20" width="140" height="240" rx="25" fill="white" opacity="0.2"/>
+                                    <rect x="70" y="35" width="60" height="6" rx="3" fill="white" opacity="0.4"/>
+                                    <circle cx="100" cy="255" r="15" fill="white" opacity="0.3"/>
+                                </svg>
+                                <span class="free-shipping-badge">Frete grátis</span>
+                            </div>
+                            <div class="product-info">
+                                <h4 class="product-name">Capa Roxo Vibrante</h4>
+                                <p class="product-specs">iPhone 13 • Roxo</p>
+                                <div class="product-price">
+                                    <span class="current-price">R$ 49.90</span>
+                                    <span class="old-price">R$ 84.90</span>
+                                </div>
+                                <div class="product-actions">
+                                    <button class="btn btn-primary add-to-cart" data-id="6">Adicionar</button>
+                                    <button class="btn btn-secondary view-details" data-id="6" data-name="Capa Roxo Vibrante" data-old-price="84.90">Detalhes</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="product-card" data-id="7" data-category="capas" data-model="12" data-color="branco" data-price="29.9" data-popular="65" data-free-shipping="false">
+                            <div class="product-image">
+                                <svg viewBox="0 0 200 280" fill="none">
+                                    <rect x="20" y="10" width="160" height="260" rx="30" fill="#ffffff" stroke="#ffffff" stroke-width="3"/>
+                                    <rect x="30" y="20" width="140" height="240" rx="25" fill="white" opacity="0.2"/>
+                                    <rect x="70" y="35" width="60" height="6" rx="3" fill="white" opacity="0.4"/>
+                                    <circle cx="100" cy="255" r="15" fill="white" opacity="0.3"/>
+                                </svg>
+                            </div>
+                            <div class="product-info">
+                                <h4 class="product-name">Capa Minimalista</h4>
+                                <p class="product-specs">iPhone 12 • Branco</p>
+                                <div class="product-price">
+                                    <span class="current-price">R$ 29.90</span>
+                                    <span class="old-price">R$ 54.90</span>
+                                </div>
+                                <div class="product-actions">
+                                    <button class="btn btn-primary add-to-cart" data-id="7">Adicionar</button>
+                                    <button class="btn btn-secondary view-details" data-id="7" data-name="Capa Minimalista" data-old-price="54.90">Detalhes</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="product-card" data-id="8" data-category="capas" data-model="12" data-color="transparente" data-price="34.9" data-popular="60" data-free-shipping="true">
+                            <div class="product-image">
+                                <svg viewBox="0 0 200 280" fill="none">
+                                    <rect x="20" y="10" width="160" height="260" rx="30" fill="#f3f4f6" stroke="#1f6feb" stroke-width="3"/>
+                                    <rect x="30" y="20" width="140" height="240" rx="25" fill="rgba(255,255,255,0.5)" opacity="0.2"/>
+                                    <rect x="70" y="35" width="60" height="6" rx="3" fill="white" opacity="0.4"/>
+                                    <circle cx="100" cy="255" r="15" fill="white" opacity="0.3"/>
+                                </svg>
+                                <span class="free-shipping-badge">Frete grátis</span>
+                            </div>
+                            <div class="product-info">
+                                <h4 class="product-name">Capa Cristal Clear</h4>
+                                <p class="product-specs">iPhone 12 • Transparente</p>
+                                <div class="product-price">
+                                    <span class="current-price">R$ 34.90</span>
+                                    <span class="old-price">R$ 59.90</span>
+                                </div>
+                                <div class="product-actions">
+                                    <button class="btn btn-primary add-to-cart" data-id="8">Adicionar</button>
+                                    <button class="btn btn-secondary view-details" data-id="8" data-name="Capa Cristal Clear" data-old-price="59.90">Detalhes</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="product-card" data-id="9" data-category="capas" data-model="11" data-color="preto" data-price="24.9" data-popular="55" data-free-shipping="false">
+                            <div class="product-image">
+                                <svg viewBox="0 0 200 280" fill="none">
+                                    <rect x="20" y="10" width="160" height="260" rx="30" fill="#1f2937" stroke="#1f2937" stroke-width="3"/>
+                                    <rect x="30" y="20" width="140" height="240" rx="25" fill="white" opacity="0.2"/>
+                                    <rect x="70" y="35" width="60" height="6" rx="3" fill="white" opacity="0.4"/>
+                                    <circle cx="100" cy="255" r="15" fill="white" opacity="0.3"/>
+                                </svg>
+                            </div>
+                            <div class="product-info">
+                                <h4 class="product-name">Capa Night Black</h4>
+                                <p class="product-specs">iPhone 11 • Preto</p>
+                                <div class="product-price">
+                                    <span class="current-price">R$ 24.90</span>
+                                    <span class="old-price">R$ 49.90</span>
+                                </div>
+                                <div class="product-actions">
+                                    <button class="btn btn-primary add-to-cart" data-id="9">Adicionar</button>
+                                    <button class="btn btn-secondary view-details" data-id="9" data-name="Capa Night Black" data-old-price="49.90">Detalhes</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="product-card" data-id="10" data-category="capas" data-model="11" data-color="rosa" data-price="29.9" data-popular="50" data-free-shipping="true">
+                            <div class="product-image">
+                                <svg viewBox="0 0 200 280" fill="none">
+                                    <rect x="20" y="10" width="160" height="260" rx="30" fill="#ec4899" stroke="#ec4899" stroke-width="3"/>
+                                    <rect x="30" y="20" width="140" height="240" rx="25" fill="white" opacity="0.2"/>
+                                    <rect x="70" y="35" width="60" height="6" rx="3" fill="white" opacity="0.4"/>
+                                    <circle cx="100" cy="255" r="15" fill="white" opacity="0.3"/>
+                                </svg>
+                                <span class="free-shipping-badge">Frete grátis</span>
+                            </div>
+                            <div class="product-info">
+                                <h4 class="product-name">Capa Soft Touch</h4>
+                                <p class="product-specs">iPhone 11 • Rosa</p>
+                                <div class="product-price">
+                                    <span class="current-price">R$ 29.90</span>
+                                    <span class="old-price">R$ 54.90</span>
+                                </div>
+                                <div class="product-actions">
+                                    <button class="btn btn-primary add-to-cart" data-id="10">Adicionar</button>
+                                    <button class="btn btn-secondary view-details" data-id="10" data-name="Capa Soft Touch" data-old-price="54.90">Detalhes</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Fones -->
+                        <div class="product-card" data-id="11" data-category="fones" data-model="universal" data-color="branco" data-price="149.9" data-popular="98" data-free-shipping="true" data-promo="true">
+                            <div class="product-image">
+                                <svg viewBox="0 0 200 200" fill="none">
+                                    <ellipse cx="60" cy="100" rx="35" ry="45" fill="#ffffff" stroke="#ffffff" stroke-width="3"/>
+                                    <ellipse cx="140" cy="100" rx="35" ry="45" fill="#ffffff" stroke="#ffffff" stroke-width="3"/>
+                                    <path d="M 95 100 Q 100 80 105 100" stroke="#ffffff" stroke-width="3" fill="none"/>
+                                    <circle cx="60" cy="100" r="15" fill="white" opacity="0.3"/>
+                                    <circle cx="140" cy="100" r="15" fill="white" opacity="0.3"/>
+                                </svg>
+                                <span class="free-shipping-badge">Frete grátis</span>
+                                <span class="promo-badge">Promoção</span>
+                            </div>
+                            <div class="product-info">
+                                <h4 class="product-name">AirPods Pro Style</h4>
+                                <p class="product-specs">Bluetooth • Branco</p>
+                                <div class="product-price">
+                                    <span class="current-price">R$ 149.90</span>
+                                    <span class="old-price">R$ 249.90</span>
+                                </div>
+                                <div class="product-actions">
+                                    <button class="btn btn-primary add-to-cart" data-id="11">Adicionar</button>
+                                    <button class="btn btn-secondary view-details" data-id="11" data-name="AirPods Pro Style" data-old-price="249.90">Detalhes</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="product-card" data-id="12" data-category="fones" data-model="universal" data-color="preto" data-price="129.9" data-popular="92" data-free-shipping="true">
+                            <div class="product-image">
+                                <svg viewBox="0 0 200 200" fill="none">
+                                    <ellipse cx="60" cy="100" rx="35" ry="45" fill="#1f2937" stroke="#1f2937" stroke-width="3"/>
+                                    <ellipse cx="140" cy="100" rx="35" ry="45" fill="#1f2937" stroke="#1f2937" stroke-width="3"/>
+                                    <path d="M 95 100 Q 100 80 105 100" stroke="#1f2937" stroke-width="3" fill="none"/>
+                                    <circle cx="60" cy="100" r="15" fill="white" opacity="0.3"/>
+                                    <circle cx="140" cy="100" r="15" fill="white" opacity="0.3"/>
+                                </svg>
+                                <span class="free-shipping-badge">Frete grátis</span>
+                            </div>
+                            <div class="product-info">
+                                <h4 class="product-name">Fone Bluetooth Premium</h4>
+                                <p class="product-specs">Bluetooth • Preto</p>
+                                <div class="product-price">
+                                    <span class="current-price">R$ 129.90</span>
+                                    <span class="old-price">R$ 199.90</span>
+                                </div>
+                                <div class="product-actions">
+                                    <button class="btn btn-primary add-to-cart" data-id="12">Adicionar</button>
+                                    <button class="btn btn-secondary view-details" data-id="12" data-name="Fone Bluetooth Premium" data-old-price="199.90">Detalhes</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="product-card" data-id="13" data-category="fones" data-model="universal" data-color="preto" data-price="89.9" data-popular="88" data-free-shipping="true">
+                            <div class="product-image">
+                                <svg viewBox="0 0 200 200" fill="none">
+                                    <ellipse cx="60" cy="100" rx="35" ry="45" fill="#1f2937" stroke="#1f2937" stroke-width="3"/>
+                                    <ellipse cx="140" cy="100" rx="35" ry="45" fill="#1f2937" stroke="#1f2937" stroke-width="3"/>
+                                    <path d="M 95 100 Q 100 80 105 100" stroke="#1f2937" stroke-width="3" fill="none"/>
+                                    <circle cx="60" cy="100" r="15" fill="white" opacity="0.3"/>
+                                    <circle cx="140" cy="100" r="15" fill="white" opacity="0.3"/>
+                                </svg>
+                                <span class="free-shipping-badge">Frete grátis</span>
+                            </div>
+                            <div class="product-info">
+                                <h4 class="product-name">Fone Esportivo Resistente</h4>
+                                <p class="product-specs">Bluetooth • Preto</p>
+                                <div class="product-price">
+                                    <span class="current-price">R$ 89.90</span>
+                                    <span class="old-price">R$ 149.90</span>
+                                </div>
+                                <div class="product-actions">
+                                    <button class="btn btn-primary add-to-cart" data-id="13">Adicionar</button>
+                                    <button class="btn btn-secondary view-details" data-id="13" data-name="Fone Esportivo Resistente" data-old-price="149.90">Detalhes</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="product-card" data-id="14" data-category="fones" data-model="universal" data-color="roxo" data-price="79.9" data-popular="83" data-free-shipping="true" data-promo="true">
+                            <div class="product-image">
+                                <svg viewBox="0 0 200 200" fill="none">
+                                    <ellipse cx="60" cy="100" rx="35" ry="45" fill="#9147ff" stroke="#9147ff" stroke-width="3"/>
+                                    <ellipse cx="140" cy="100" rx="35" ry="45" fill="#9147ff" stroke="#9147ff" stroke-width="3"/>
+                                    <path d="M 95 100 Q 100 80 105 100" stroke="#9147ff" stroke-width="3" fill="none"/>
+                                    <circle cx="60" cy="100" r="15" fill="white" opacity="0.3"/>
+                                    <circle cx="140" cy="100" r="15" fill="white" opacity="0.3"/>
+                                </svg>
+                                <span class="free-shipping-badge">Frete grátis</span>
+                                <span class="promo-badge">Promoção</span>
+                            </div>
+                            <div class="product-info">
+                                <h4 class="product-name">Fone In-Ear Roxo</h4>
+                                <p class="product-specs">Bluetooth • Roxo</p>
+                                <div class="product-price">
+                                    <span class="current-price">R$ 79.90</span>
+                                    <span class="old-price">R$ 129.90</span>
+                                </div>
+                                <div class="product-actions">
+                                    <button class="btn btn-primary add-to-cart" data-id="14">Adicionar</button>
+                                    <button class="btn btn-secondary view-details" data-id="14" data-name="Fone In-Ear Roxo" data-old-price="129.90">Detalhes</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="product-card" data-id="15" data-category="fones" data-model="universal" data-color="branco" data-price="59.9" data-popular="77" data-free-shipping="false">
+                            <div class="product-image">
+                                <svg viewBox="0 0 200 200" fill="none">
+                                    <ellipse cx="60" cy="100" rx="35" ry="45" fill="#ffffff" stroke="#ffffff" stroke-width="3"/>
+                                    <ellipse cx="140" cy="100" rx="35" ry="45" fill="#ffffff" stroke="#ffffff" stroke-width="3"/>
+                                    <path d="M 95 100 Q 100 80 105 100" stroke="#ffffff" stroke-width="3" fill="none"/>
+                                    <circle cx="60" cy="100" r="15" fill="white" opacity="0.3"/>
+                                    <circle cx="140" cy="100" r="15" fill="white" opacity="0.3"/>
+                                </svg>
+                            </div>
+                            <div class="product-info">
+                                <h4 class="product-name">Fone TWS Básico</h4>
+                                <p class="product-specs">Bluetooth • Branco</p>
+                                <div class="product-price">
+                                    <span class="current-price">R$ 59.90</span>
+                                    <span class="old-price">R$ 99.90</span>
+                                </div>
+                                <div class="product-actions">
+                                    <button class="btn btn-primary add-to-cart" data-id="15">Adicionar</button>
+                                    <button class="btn btn-secondary view-details" data-id="15" data-name="Fone TWS Básico" data-old-price="99.90">Detalhes</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="product-card" data-id="16" data-category="fones" data-model="universal" data-color="rosa" data-price="119.9" data-popular="72" data-free-shipping="true">
+                            <div class="product-image">
+                                <svg viewBox="0 0 200 200" fill="none">
+                                    <ellipse cx="60" cy="100" rx="35" ry="45" fill="#ec4899" stroke="#ec4899" stroke-width="3"/>
+                                    <ellipse cx="140" cy="100" rx="35" ry="45" fill="#ec4899" stroke="#ec4899" stroke-width="3"/>
+                                    <path d="M 95 100 Q 100 80 105 100" stroke="#ec4899" stroke-width="3" fill="none"/>
+                                    <circle cx="60" cy="100" r="15" fill="white" opacity="0.3"/>
+                                    <circle cx="140" cy="100" r="15" fill="white" opacity="0.3"/>
+                                </svg>
+                                <span class="free-shipping-badge">Frete grátis</span>
+                            </div>
+                            <div class="product-info">
+                                <h4 class="product-name">Fone Premium Rosa</h4>
+                                <p class="product-specs">Bluetooth • Rosa</p>
+                                <div class="product-price">
+                                    <span class="current-price">R$ 119.90</span>
+                                    <span class="old-price">R$ 189.90</span>
+                                </div>
+                                <div class="product-actions">
+                                    <button class="btn btn-primary add-to-cart" data-id="16">Adicionar</button>
+                                    <button class="btn btn-secondary view-details" data-id="16" data-name="Fone Premium Rosa" data-old-price="189.90">Detalhes</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>TechStore</h3>
+                    <p>© 2025 TechStore. Todos os direitos reservados.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#termos">Termos de Uso</a>
+                    <a href="#ajuda">Ajuda</a>
+                    <a href="#contato">Contato</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
